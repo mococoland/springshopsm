@@ -13,6 +13,11 @@ public class OrderService {
     private OrderDao orderDao;
     private ConnectionPool cp;
 
+    public OrderService(OrderDao orderDao, ConnectionPool cp) {
+        this.orderDao = orderDao;
+        this.cp = cp;
+    }
+
     public OrderService() {
         orderDao = new OrderDao();
         try {

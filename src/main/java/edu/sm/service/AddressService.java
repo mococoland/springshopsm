@@ -3,7 +3,6 @@ package edu.sm.service;
 import edu.sm.dao.AddressDao;
 import edu.sm.dto.Address;
 import edu.sm.frame.ConnectionPool;
-import edu.sm.frame.Dao;
 import edu.sm.frame.MService;
 
 import java.sql.Connection;
@@ -14,14 +13,10 @@ public class AddressService implements MService<String, Address> {
     AddressDao addressDao;
     ConnectionPool cp;
 
-
     public AddressService(AddressDao addressDao, ConnectionPool connectionPool) {
         this.addressDao = addressDao;
         this.cp = connectionPool;
     }
-
-
-
 
     public AddressService() {
         addressDao = new AddressDao();

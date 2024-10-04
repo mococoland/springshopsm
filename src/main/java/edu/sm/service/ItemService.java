@@ -19,6 +19,11 @@ public class ItemService implements MService<String, Item> {
     ItemDao dao;
     ConnectionPool cp;
 
+    public ItemService(ItemDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public ItemService() {
         dao = new ItemDao();
         try {

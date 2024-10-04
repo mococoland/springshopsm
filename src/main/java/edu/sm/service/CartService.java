@@ -18,6 +18,11 @@ public class CartService implements MService <Integer, Cart> {
     ItemDao itemDao;
     private ConnectionPool cp;
 
+    public CartService(CartDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public CartService() {
         dao = new CartDao();
         itemDao = new ItemDao();
@@ -28,8 +33,6 @@ public class CartService implements MService <Integer, Cart> {
         }
     }
 
-    public CartService(CartDao cartDao, ConnectionPool connectionPool) {
-    }
 
     // 장바구니에 아이템을 추가하거나 업데이트하는 메서드
     @Override

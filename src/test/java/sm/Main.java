@@ -11,7 +11,7 @@ import edu.sm.service.ReviewService;
 import java.util.List;
 
 
-public class Main {
+public class Main { // test
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
@@ -98,7 +98,6 @@ public class Main {
                                                 .zipnum("1215")
                                                 .addrD("네이처")
                                                 .build();
-
                                         try {
                                             addressServiceIn.add(addressIn);
                                         } catch (Exception e) {
