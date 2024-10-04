@@ -15,6 +15,11 @@ public class PayService implements MService <Integer, Pay>{
     PayDao dao;
     ConnectionPool cp;
 
+    public PayService(PayDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public PayService() throws SQLException {
         this.cp = ConnectionPool.create();  // 인스턴스를 직접 생성
         this.dao = new PayDao();            // PayDao도 초기화

@@ -13,6 +13,11 @@ public class Prod_BoardService implements MService<String, Prod_Board> {
     private Prod_BoardDao dao;
     private ConnectionPool cp;
 
+    public Prod_BoardService(Prod_BoardDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     // 생성자를 통해 ConnectionPool과 Dao 초기화
     public Prod_BoardService() {
         dao = new Prod_BoardDao();

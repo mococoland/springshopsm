@@ -12,6 +12,11 @@ public class ReviewService implements MService<String, Review> {
     ReviewDao dao;
     ConnectionPool cp;
 
+    public ReviewService(ReviewDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public ReviewService() {
         dao = new ReviewDao();
         try {

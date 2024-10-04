@@ -26,6 +26,10 @@ public class ConnectionPool {
         }
     }
 
+    public ConnectionPool() {
+
+    }
+
     public static ConnectionPool create() throws SQLException {
 
         String url = rb.getString("url");

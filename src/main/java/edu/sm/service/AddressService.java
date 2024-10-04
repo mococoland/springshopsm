@@ -13,6 +13,11 @@ public class AddressService implements MService<String, Address> {
     AddressDao addressDao;
     ConnectionPool cp;
 
+    public AddressService(AddressDao addressDao, ConnectionPool connectionPool) {
+        this.addressDao = addressDao;
+        this.cp = connectionPool;
+    }
+
     public AddressService() {
         addressDao = new AddressDao();
         try {

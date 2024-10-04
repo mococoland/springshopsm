@@ -14,6 +14,11 @@ public class CategoryService implements MService<Integer, Category> {
     private CategoryDao dao;
     private ConnectionPool cp;
 
+    public CategoryService(CategoryDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public CategoryService() {
         dao = new CategoryDao();
         try {

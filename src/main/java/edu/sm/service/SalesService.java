@@ -11,6 +11,11 @@ public class SalesService {
     SalesDao salesDao;
     ConnectionPool cp;
 
+    public SalesService(SalesDao salesDao, ConnectionPool cp) {
+        this.salesDao = salesDao;
+        this.cp = cp;
+    }
+
     public SalesService() {
         salesDao = new SalesDao();
         try {
