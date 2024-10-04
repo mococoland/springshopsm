@@ -22,6 +22,9 @@ public class OrderService {
         }
     }
 
+    public OrderService(OrderDao orderDao, ConnectionPool connectionPool) {
+    }
+
     public List<OrderList> getOrdersByCustKey(int custKey) throws Exception {
         Connection con = cp.getConnection();
         List<OrderList> orders;

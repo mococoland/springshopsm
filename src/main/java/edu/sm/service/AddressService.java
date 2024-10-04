@@ -12,17 +12,21 @@ import java.util.List;
 public class AddressService implements MService<String, Address> {
     AddressDao addressDao;
     ConnectionPool cp;
+    MService<String, Address> repository;
 
-    public AddressService() {
-        addressDao = new AddressDao();
-        try {
-            cp = ConnectionPool.create(); // ConnectionPool을 생성
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public AddressService(String s) {
     }
 
+    public AddressService(AddressDao addressDao, ConnectionPool connectionPool) {
+        this.addressDao = addressDao;
+        this.cp = connectionPool;
+    }
 
+    public void setRepository(MService<String, Address> repository) {
+        this.repository = repository;
+
+        System.out.println("Create Connection Pool ....");
+    }
 
     @Override
     public Address add(Address address) throws Exception {

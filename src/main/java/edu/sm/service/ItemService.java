@@ -28,6 +28,9 @@ public class ItemService implements MService<String, Item> {
         }
     }
 
+    public ItemService(ItemDao itemDao, ConnectionPool connectionPool) {
+    }
+
     @Override
     public Item add(Item item) throws Exception {
         Connection con = cp.getConnection();

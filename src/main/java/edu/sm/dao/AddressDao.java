@@ -4,11 +4,12 @@ import edu.sm.dto.Address;
 import edu.sm.exception.DuplicatedIdException;
 import edu.sm.frame.Dao;
 import edu.sm.frame.Sql;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Repository
 public class AddressDao implements Dao<String, Address> {
     @Override
     public Address insert(Address address, Connection con) throws Exception {
