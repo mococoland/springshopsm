@@ -24,6 +24,11 @@ public class CustomerService implements MService <String, Customer> {
         }
     }
 
+    public CustomerService(CustomerDao customerDao, ConnectionPool connectionPool) {
+        this.dao = customerDao;
+        this.cp = connectionPool;
+    }
+
     @Override
     public Customer add(Customer customer) throws Exception {
         return null;

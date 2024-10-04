@@ -20,6 +20,11 @@ public class PayService implements MService <Integer, Pay>{
         this.dao = new PayDao();            // PayDao도 초기화
     }
 
+    public PayService(PayDao payDao, ConnectionPool connectionPool) {
+        this.dao = payDao;
+        this.cp = connectionPool;
+    }
+
     @Override
     public Pay add(Pay pay) throws Exception {
         return null;

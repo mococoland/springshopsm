@@ -23,6 +23,11 @@ public class CategoryService implements MService<Integer, Category> {
         }
     }
 
+    public CategoryService(CategoryDao categoryDao, ConnectionPool connectionPool) {
+        this.dao = categoryDao;
+        this.cp = connectionPool;
+    }
+
     @Override
     public Category add(Category category) throws Exception {
         Connection con = cp.getConnection();
