@@ -1,14 +1,10 @@
 package sm.Manager;
 
 import edu.sm.service.CustomerService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UpdateMemberOut {
     public static void main(String[] args) {
         CustomerService custService = new CustomerService();
-        ApplicationContext factory =
-                new ClassPathXmlApplicationContext("spring.xml"); //
         String newMemberOut = "활동정지";  // 변경할 상태 (예: "활동", "휴면")
         int custKey = 1;  // 업데이트할 고객의 custKey
 

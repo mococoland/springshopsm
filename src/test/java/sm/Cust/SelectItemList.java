@@ -1,13 +1,18 @@
-package sm.Manager;
+package sm.Cust;
 
 import edu.sm.dto.Item;
 import edu.sm.service.ItemService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class SelectItemList {
     public static void main(String[] args) {
+        ApplicationContext factory =
+                new ClassPathXmlApplicationContext("spring.xml");
+
         Scanner scanner = new Scanner(System.in);
         ItemService itemService = new ItemService();  // ItemService 초기화 추가
 

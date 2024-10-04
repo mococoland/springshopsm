@@ -29,6 +29,8 @@ public class ItemService implements MService<String, Item> {
     }
 
     public ItemService(ItemDao itemDao, ConnectionPool connectionPool) {
+        this.dao = itemDao;
+        this.cp = connectionPool;
     }
 
     @Override

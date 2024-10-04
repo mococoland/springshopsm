@@ -2,14 +2,11 @@ package sm.Manager;
 
 import edu.sm.dto.Category;
 import edu.sm.service.CategoryService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UpdateCategory {
     public static void main(String[] args) {
         CategoryService categoryService = new CategoryService();
-        ApplicationContext factory =
-                new ClassPathXmlApplicationContext("spring.xml"); //
+
         // 업데이트할 카테고리 정보
         int categoryId = 20; // 업데이트할 카테고리 ID
         String newCategoryName = "업데이트된 후드티"; // 새 카테고리 이름

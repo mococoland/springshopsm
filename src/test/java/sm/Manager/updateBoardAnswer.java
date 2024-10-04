@@ -1,8 +1,6 @@
 package sm.Manager;
 
 import edu.sm.service.Prod_BoardService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
@@ -10,8 +8,7 @@ public class updateBoardAnswer {
     public static void main(String[] args) {
         Prod_BoardService prodBoardService = new Prod_BoardService();
         Scanner scanner = new Scanner(System.in);
-        ApplicationContext factory =
-                new ClassPathXmlApplicationContext("spring.xml"); //
+
         System.out.print("답변을 업데이트할 문의의 boardKey를 입력하세요: ");
         String boardKey = scanner.nextLine();
 

@@ -1,16 +1,13 @@
 package sm.Manager;
 
 import edu.sm.service.SalesService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
 public class SalesTest {
     public static void main(String[] args) {
         SalesService salesService = new SalesService();
-        ApplicationContext factory =
-                new ClassPathXmlApplicationContext("spring.xml"); //
+
         try {
             // 월별 판매량 테스트
             List<Integer> monthlySales = salesService.getMonthlySales();

@@ -22,7 +22,9 @@ public class ReviewService implements MService<String, Review> {
         }
     }
 
-    public ReviewService(SalesDao salesDao, ConnectionPool connectionPool) {
+    public ReviewService(ReviewDao reviewDao, ConnectionPool connectionPool) {
+        this.dao = reviewDao;
+        this.cp = connectionPool;
     }
 
     @Override

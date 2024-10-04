@@ -1,12 +1,15 @@
-package sm.Manager;
+package sm.Cust;
 
 import edu.sm.dto.Category;
 import edu.sm.service.CategoryService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
 public class SelectAllCategory {
     public static void main(String[] args) {
+        ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
         CategoryService categoryService = new CategoryService();
 
         try {

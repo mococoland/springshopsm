@@ -1,13 +1,18 @@
-package sm.Manager;
+package sm.Cust;
 
 import edu.sm.dto.Prod_Board;
 import edu.sm.service.Prod_BoardService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class SelectFineBoard {
     public static void main(String[] args) {
+        ApplicationContext factory =
+                new ClassPathXmlApplicationContext("spring.xml");
+
         Prod_BoardService prodBoardService = new Prod_BoardService();
         Scanner scanner = new Scanner(System.in);
 
