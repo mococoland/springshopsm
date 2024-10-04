@@ -56,13 +56,13 @@
         <constructor-arg ref="connectionPool"/>
     </bean>
 
-    <bean id="reviewService" class="edu.sm.service.ReviewService">
-        <constructor-arg ref="reviewDao"/>
+    <bean id="paymentService" class="edu.sm.service.CartService">
+        <constructor-arg ref="cartDao"/>
         <constructor-arg ref="connectionPool"/>
     </bean>
 
-    <bean id="paymentService" class="edu.sm.service.CartService">
-        <constructor-arg ref="cartDao"/>
+    <bean id="ReviewService" class="edu.sm.service.ReviewService">
+        <constructor-arg ref="reviewDao"/>
         <constructor-arg ref="connectionPool"/>
     </bean>
 

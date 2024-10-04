@@ -14,6 +14,12 @@ public class CustomerService implements MService <String, Customer> {
     private ConnectionPool cp; // ConnectionPool 객체를 선언
     private CustomerDao dao; // CustomerDao 객체를 선언
 
+    public CustomerService(CustomerDao customerDao, ConnectionPool connectionPool) {
+        this.dao = customerDao;
+        this.cp = connectionPool;
+    }
+
+
     // 생성자에서 ConnectionPool과 CustomerDao 초기화
     public CustomerService() {
         dao = new CustomerDao();

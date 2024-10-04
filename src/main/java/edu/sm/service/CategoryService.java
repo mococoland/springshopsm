@@ -14,6 +14,11 @@ public class CategoryService implements MService<Integer, Category> {
     private CategoryDao dao;
     private ConnectionPool cp;
 
+    public CategoryService(CategoryDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
+
     public CategoryService() {
         dao = new CategoryDao();
         try {
@@ -24,8 +29,6 @@ public class CategoryService implements MService<Integer, Category> {
     }
 
     public CategoryService(CategoryDao categoryDao, ConnectionPool connectionPool) {
-        this.dao = categoryDao;
-        this.cp = connectionPool;
     }
 
     @Override

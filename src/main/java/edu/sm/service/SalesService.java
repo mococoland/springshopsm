@@ -11,6 +11,11 @@ public class SalesService {
     SalesDao salesDao;
     ConnectionPool cp;
 
+    public SalesService(SalesDao salesDao, ConnectionPool cp) {
+        this.salesDao = salesDao;
+        this.cp = cp;
+    }
+
     public SalesService() {
         salesDao = new SalesDao();
         try {
@@ -22,7 +27,7 @@ public class SalesService {
 
     public SalesService(SalesDao salesDao, ConnectionPool connectionPool) {
         this.salesDao = salesDao;
-        cp = connectionPool;
+        this.cp = connectionPool;
     }
 
     public List<Integer> getMonthlySales() throws Exception {

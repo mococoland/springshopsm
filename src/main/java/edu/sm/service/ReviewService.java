@@ -1,6 +1,7 @@
 package edu.sm.service;
 
 import edu.sm.dao.ReviewDao;
+import edu.sm.dao.SalesDao;
 import edu.sm.dto.Review;
 import java.sql.SQLException;
 import java.util.List;
@@ -11,6 +12,11 @@ import edu.sm.frame.MService;
 public class ReviewService implements MService<String, Review> {
     ReviewDao dao;
     ConnectionPool cp;
+
+    public ReviewService(ReviewDao dao, ConnectionPool cp) {
+        this.dao = dao;
+        this.cp = cp;
+    }
 
     public ReviewService() {
         dao = new ReviewDao();

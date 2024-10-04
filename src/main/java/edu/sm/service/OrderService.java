@@ -13,6 +13,11 @@ public class OrderService {
     private OrderDao orderDao;
     private ConnectionPool cp;
 
+    public OrderService(OrderDao orderDao, ConnectionPool cp) {
+        this.orderDao = orderDao;
+        this.cp = cp;
+    }
+
     public OrderService() {
         orderDao = new OrderDao();
         try {
@@ -24,7 +29,7 @@ public class OrderService {
 
     public OrderService(OrderDao orderDao, ConnectionPool connectionPool) {
         this.orderDao = orderDao;
-        cp = connectionPool;
+        this.cp = connectionPool;
     }
 
     public List<OrderList> getOrdersByCustKey(int custKey) throws Exception {
