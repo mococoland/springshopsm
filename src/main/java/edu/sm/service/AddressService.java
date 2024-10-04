@@ -22,6 +22,10 @@ public class AddressService implements MService<String, Address> {
         }
     }
 
+    public AddressService(AddressDao addressDao, ConnectionPool connectionPool) {
+        this.addressDao = addressDao;
+        this.cp = connectionPool;
+    }
 
 
     @Override

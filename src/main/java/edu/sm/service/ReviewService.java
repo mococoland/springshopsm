@@ -1,6 +1,7 @@
 package edu.sm.service;
 
 import edu.sm.dao.ReviewDao;
+import edu.sm.dao.SalesDao;
 import edu.sm.dto.Review;
 import java.sql.SQLException;
 import java.util.List;
@@ -20,6 +21,10 @@ public class ReviewService implements MService<String, Review> {
             throw new RuntimeException(e);
         }
     }
+
+    public ReviewService(SalesDao salesDao, ConnectionPool connectionPool) {
+    }
+
     @Override
     public Review add(Review review) throws Exception {
         Connection con = cp.getConnection();
