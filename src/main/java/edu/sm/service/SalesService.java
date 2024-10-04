@@ -21,6 +21,8 @@ public class SalesService {
     }
 
     public SalesService(SalesDao salesDao, ConnectionPool connectionPool) {
+        this.salesDao = salesDao;
+        cp = connectionPool;
     }
 
     public List<Integer> getMonthlySales() throws Exception {

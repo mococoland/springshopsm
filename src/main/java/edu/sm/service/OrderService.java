@@ -23,6 +23,8 @@ public class OrderService {
     }
 
     public OrderService(OrderDao orderDao, ConnectionPool connectionPool) {
+        this.orderDao = orderDao;
+        cp = connectionPool;
     }
 
     public List<OrderList> getOrdersByCustKey(int custKey) throws Exception {

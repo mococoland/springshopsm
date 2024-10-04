@@ -21,6 +21,8 @@ public class PayService implements MService <Integer, Pay>{
     }
 
     public PayService(PayDao payDao, ConnectionPool connectionPool) {
+        this.dao = payDao;
+        this.cp = connectionPool;
     }
 
     @Override

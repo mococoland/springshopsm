@@ -20,6 +20,12 @@ public class ReviewService implements MService<String, Review> {
             throw new RuntimeException(e);
         }
     }
+
+    public ReviewService(ReviewDao reviewDao, ConnectionPool connectionPool) {
+        this.dao = reviewDao;
+        this.cp = connectionPool;
+    }
+
     @Override
     public Review add(Review review) throws Exception {
         Connection con = cp.getConnection();

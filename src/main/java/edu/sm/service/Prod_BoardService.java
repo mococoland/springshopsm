@@ -24,6 +24,8 @@ public class Prod_BoardService implements MService<String, Prod_Board> {
     }
 
     public Prod_BoardService(Prod_BoardDao prodBoardDao, ConnectionPool connectionPool) {
+        this.dao = prodBoardDao;
+        this.cp = connectionPool;
     }
 
     @Override
